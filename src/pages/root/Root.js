@@ -1,10 +1,10 @@
 import { GlobalStyle } from 'assets/styles/GlobalStyle.js';
 import { ThemeProvider } from 'styled-components';
-import './Root.style.js';
 import { theme } from 'assets/styles/theme.js';
-import { Wrapper } from './Root.style.js';
-import { Header } from 'components/atoms/Header/Header.js';
-import { FetchList } from 'components/organisms/FetchList/FetchList.js';
+import { Wrapper } from 'assets/styles/Root.styles';
+import { Header } from 'components/common/Header.js';
+import { FetchList } from 'pages/root/FetchList.js';
+import 'assets/styles/Root.styles';
 
 const Root = () => {
   return (

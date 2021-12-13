@@ -4,17 +4,17 @@ export const Button = styled.button`
   padding: 7px 20px;
   margin: 15px 50px;
   font-size: ${({ theme }) => theme.fontSize.s};
-  color: ${({ theme }) => theme.colors.darkPurple};
+  color: ${({ theme }) => theme.colors.border};
   background-color: transparent;
-  border: 2px solid ${({ theme }) => theme.colors.darkPurple};
+  border: 2px solid ${({ theme }) => theme.colors.border};
   border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.5s;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.darkPurple};
-    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.border};
+    color: ${({ theme }) => theme.colors.textHover};
   }
 `;
 

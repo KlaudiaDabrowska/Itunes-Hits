@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from 'components/atoms/Button/Button';
-import { Wrapper, Image, Number, Description, AlbumTitle, ArtistName } from './ListItem.styles';
+import { Wrapper, Image, Number, Description, AlbumTitle, ArtistName } from 'assets/styles/ListItem.styles';
+import Button from 'components/common/Button';
 
 export const ListItem = ({ el, index }) => {
   return (
