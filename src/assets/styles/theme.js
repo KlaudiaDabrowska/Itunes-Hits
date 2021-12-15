@@ -2,11 +2,13 @@ export const theme = {
   colors: {
     textPrimary: '#111111',
     textSecondary: '#606060',
-    background: '#FBF9FC',
+    backgroundPrimary: '#FBF9FC',
+    backgroundSecondary: '#e8e3ed',
     border: '#773795',
     textHover: '#FFFFFF',
   },
   fontSize: {
+    xxl: '2.8rem',
     xl: '2.2rem',
     l: '1.5rem',
     m: '1rem',

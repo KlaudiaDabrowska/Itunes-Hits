@@ -11,6 +11,10 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Roboto', sans-serif;
     }
 
+    html{
+        background-color: ${({ theme }) => theme.colors.backgroundPrimary};
+    }
+    
     :root {
         font-size:16px;
     }

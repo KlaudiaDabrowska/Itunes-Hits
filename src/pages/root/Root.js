@@ -3,18 +3,25 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from 'assets/styles/theme.js';
 import { Wrapper } from 'assets/styles/Root.styles';
 import { Header } from 'components/common/Header.js';
-import { FetchList } from 'pages/root/FetchList.js';
 import 'assets/styles/Root.styles';
+import { List } from 'pages/mainView/List';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { MoreInfo } from 'pages/moreInfo/MoreInfo';
 
 const Root = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Wrapper>
-        <Header />
-        <FetchList />
-      </Wrapper>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Wrapper>
+          <Header />
+          <Routes>
+            <Route path="/more-info" element={<MoreInfo />} />
+            <Route path="/" element={<List />} />
+          </Routes>
+        </Wrapper>
+      </ThemeProvider>
+    </Router>
   );
 };
 

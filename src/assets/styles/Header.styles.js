@@ -9,8 +9,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h1`
-  margin-left: ${({ theme }) => theme.spacing[8]};
-  font-size: ${({ theme }) => theme.fontSize.xl};
+  font-size: ${({ theme }) => theme.fontSize.xxl};
   color: ${({ theme }) => theme.colors.textPrimary};
-  letter-spacing: 10px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
 `;

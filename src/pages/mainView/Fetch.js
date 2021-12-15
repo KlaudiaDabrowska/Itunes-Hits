@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { List } from './List';
+import { useEffect, useState } from 'react';
 import { baseUrl } from 'config/BaseURL';
 
-export const FetchList = () => {
+export const FetchData = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [hits, setHits] = useState([]);
@@ -23,11 +22,9 @@ export const FetchList = () => {
     fetchData();
   }, []);
 
-  if (error) {
-    return <div> Error: {error.message}</div>;
-  } else if (isLoading) {
-    return <div> Loading....</div>;
-  } else {
-    return <List hits={hits} />;
-  }
+  return {
+    error: error,
+    isLoading: isLoading,
+    hits: hits,
+  };
 };
