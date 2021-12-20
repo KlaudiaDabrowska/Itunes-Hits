@@ -28,3 +28,20 @@ export const FetchData = () => {
     hits: hits,
   };
 };
+
+export const GetAlbum = (albumId) => {
+  const [hit, setHit] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(`${baseUrl}topalbums/limit=100/json`);
+      const json = await response.json();
+      setHit(json.feed.entry.find((element) => element.id.attributes['im:id'] === albumId));
+    };
+    fetchData();
+  }, [albumId]);
+
+  return {
+    hit: hit,
+  };
+};

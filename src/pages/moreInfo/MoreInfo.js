@@ -1,28 +1,31 @@
 import { Price, Wrapper, Category, ReleaseDate, AlbumTitle, ArtistName, Image } from 'assets/styles/MoreInfo.styles';
 import { Button } from 'components/common/Button';
 import { CloseIcon } from 'assets/styles/Button.styles';
-import { useLocation } from 'react-router';
 import { StyledLink } from 'assets/styles/Button.styles';
+import { useParams } from 'react-router-dom';
+import { GetAlbum } from 'pages/mainView/Fetch';
 
 export const MoreInfo = () => {
-  const data = useLocation();
-  const selectedAlbum = data.state.selectedAlbum;
+  const params = useParams();
+  const { hit } = GetAlbum(params.albumId);
 
-  return (
+  return hit ? (
     <Wrapper>
       <StyledLink to="/">
         <Button>
           <CloseIcon />
         </Button>
       </StyledLink>
-      <AlbumTitle>{selectedAlbum['im:name'].label}</AlbumTitle>
-      <ArtistName>{selectedAlbum['im:artist'].label}</ArtistName>
-      <Image src={selectedAlbum['im:image'][2].label} />
+      <AlbumTitle>{hit['im:name'].label}</AlbumTitle>
+      <ArtistName>{hit['im:artist'].label}</ArtistName>
+      <Image src={hit['im:image'][2].label} />
       <Price>
-        Price: {selectedAlbum['im:price']['attributes'].amount} {selectedAlbum['im:price'].attributes.currency}
+        Price: {hit['im:price']['attributes'].amount} {hit['im:price'].attributes.currency}
       </Price>
-      <Category>Category: {selectedAlbum.category.attributes.label} </Category>
-      <ReleaseDate>Release Date: {selectedAlbum['im:releaseDate'].attributes.label} </ReleaseDate>
+      <Category>Category: {hit.category.attributes.label} </Category>
+      <ReleaseDate>Release Date: {hit['im:releaseDate'].attributes.label} </ReleaseDate>
     </Wrapper>
+  ) : (
+    <Wrapper></Wrapper>
   );
 };

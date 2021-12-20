@@ -1,11 +1,14 @@
 import React from 'react';
 import { Wrapper, Number, Description, Image, AlbumTitle, ArtistName } from 'assets/styles/ListItem.styles';
-import { Button } from 'components/common/Button';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { StyledButton } from 'assets/styles/Button.styles';
 
 export const ListItem = ({ el, index }) => {
-  const handleClick = (e) => {
+  let navigate = useNavigate();
+
+  const handleClick = () => {
     sessionStorage.setItem('scrollPosition', window.pageYOffset);
+    navigate(`/more-info/${el.id.attributes['im:id']}`);
   };
 
   return (
@@ -16,9 +19,7 @@ export const ListItem = ({ el, index }) => {
         <AlbumTitle>{el['im:name'].label}</AlbumTitle>
         <ArtistName>{el['im:artist'].label}</ArtistName>
       </Description>
-      <Link to="/more-info" state={{ selectedAlbum: el }} onClick={handleClick}>
-        <Button>More info</Button>
-      </Link>
+      <StyledButton onClick={handleClick}>More info</StyledButton>
     </Wrapper>
   );
 };

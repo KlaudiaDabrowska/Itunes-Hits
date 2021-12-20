@@ -11,7 +11,6 @@ export const CloseIcon = styled(Close)`
 `;
 
 export const StyledButton = styled.button`
-  align-self: flex-end;
   padding: 7px 20px;
   margin: 15px 20px;
   font-size: ${({ theme }) => theme.fontSize.s};

@@ -16,7 +16,7 @@ const Root = () => {
         <Wrapper>
           <Header />
           <Routes>
-            <Route path="/more-info" element={<MoreInfo />} />
+            <Route path="/more-info/:albumId" element={<MoreInfo />} />
             <Route path="/" element={<List />} />
           </Routes>
         </Wrapper>
