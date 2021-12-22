@@ -5,12 +5,10 @@ export const Wrapper = styled.li`
   align-items: center;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.backgroundSecondary};
-  margin-bottom: ${({ theme }) => theme.spacing[3]};
+  margin-bottom: ${({ theme }) => theme.spacing.s};
+  /* margin-bottom: ${({ theme }) => theme.spacing[3]}; */
   border: 2px solid ${({ theme }) => theme.colors.border};
   border-radius: 20px;
-  /* @media (max-width: 995px) {
-    width: 95%;
-  } */
 `;
 
 export const Number = styled.div`
@@ -35,8 +33,6 @@ export const Description = styled.div`
 `;
 
 export const Image = styled.div`
-  /* width: 6rem;
-  height: 6rem; */
   width: 80px;
   height: 80px;
   margin: 1.2rem;
@@ -57,7 +53,7 @@ export const Image = styled.div`
   @media (max-width: 411px) {
     width: 45px;
     height: 45px;
-    margin: 1rem;
+    margin: ${({ theme }) => theme.spacing.s};
   }
 `;
 

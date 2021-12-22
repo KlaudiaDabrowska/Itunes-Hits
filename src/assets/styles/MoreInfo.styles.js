@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.backgroundSecondary};
   width: 60%;
   height: 62vh;
-  margin-bottom: 10rem;
+  margin-bottom: ${({ theme }) => theme.spacing.xxxl};
   border: 2px solid ${({ theme }) => theme.colors.border};
   border-radius: 20px;
   @media (max-width: 540px) {
@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
 export const Image = styled.div`
   width: 150px;
   height: 150px;
-  margin: 5rem;
+  margin: ${({ theme }) => theme.spacing.xxl};
   background-image: ${({ src }) => `url(${src})`};
   background-size: cover;
   @media (max-width: 540px) {
@@ -32,7 +32,7 @@ export const Image = styled.div`
   @media (max-width: 411px) {
     width: 100px;
     height: 100px;
-    margin: 4rem;
+    margin: ${({ theme }) => theme.spacing.xl};
   }
 `;
 
@@ -65,7 +65,7 @@ export const ArtistName = styled.p`
 `;
 
 export const Price = styled.div`
-  margin-bottom: 0.5rem;
+  margin-bottom: ${({ theme }) => theme.spacing.xs};
   font-size: ${({ theme }) => theme.fontSize.l};
   color: ${({ theme }) => theme.colors.textPrimary};
   font-weight: bold;
@@ -79,7 +79,7 @@ export const Price = styled.div`
 `;
 
 export const Category = styled.div`
-  margin-bottom: 0.5rem;
+  margin-bottom: ${({ theme }) => theme.spacing.xs};
   font-size: ${({ theme }) => theme.fontSize.l};
   color: ${({ theme }) => theme.colors.textPrimary};
   font-weight: bold;
@@ -93,7 +93,7 @@ export const Category = styled.div`
 `;
 
 export const ReleaseDate = styled.div`
-  margin-bottom: 0.5rem;
+  margin-bottom: ${({ theme }) => theme.spacing.xs};
   font-size: ${({ theme }) => theme.fontSize.l};
   color: ${({ theme }) => theme.colors.textPrimary};
   font-weight: bold;
