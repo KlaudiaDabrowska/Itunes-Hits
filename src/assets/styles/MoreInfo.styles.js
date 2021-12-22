@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.backgroundSecondary};
   width: 60%;
-  height: 62vh;
   margin-bottom: ${({ theme }) => theme.spacing.xxxl};
   border: 2px solid ${({ theme }) => theme.colors.border};
   border-radius: 20px;
@@ -33,6 +32,9 @@ export const Image = styled.div`
     width: 100px;
     height: 100px;
     margin: ${({ theme }) => theme.spacing.xl};
+  }
+  @media (max-width: 360px) {
+    margin: ${({ theme }) => theme.spacing.m};
   }
 `;
 
@@ -93,7 +95,7 @@ export const Category = styled.div`
 `;
 
 export const ReleaseDate = styled.div`
-  margin-bottom: ${({ theme }) => theme.spacing.xs};
+  margin-bottom: ${({ theme }) => theme.spacing.l};
   font-size: ${({ theme }) => theme.fontSize.l};
   color: ${({ theme }) => theme.colors.textPrimary};
   font-weight: bold;
