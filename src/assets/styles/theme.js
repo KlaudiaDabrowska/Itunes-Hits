@@ -11,8 +11,11 @@ export const theme = {
     xxl: '2.8rem',
     xl: '2.2rem',
     l: '1.5rem',
-    m: '1rem',
-    s: '.75rem',
+    m: '1.2rem',
+    s: '1rem',
+    xs: '.75rem',
+    xxs: '.7rem',
+    xxxs: '.5rem',
   },
   spacing: ['0.25rem', '0.5rem', '0.75rem', '1rem', '1.5rem', '2rem', '3rem', '4rem', '6rem', '8rem', '12rem', '16rem', '24rem'],
 };

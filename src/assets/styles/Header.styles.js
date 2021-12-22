@@ -13,4 +13,11 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.textPrimary};
   letter-spacing: 8px;
   text-transform: uppercase;
+  text-align: center;
+  @media (max-width: 1190px) {
+    font-size: ${({ theme }) => theme.fontSize.xl};
+  }
+  @media (max-width: 540px) {
+    font-size: ${({ theme }) => theme.fontSize.l};
+  }
 `;
