@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { baseUrl } from 'config/BaseURL';
+import PropTypes from 'prop-types';
 
 export const FetchData = () => {
   const [error, setError] = useState(null);
@@ -44,4 +45,8 @@ export const GetAlbum = (albumId) => {
   return {
     hit: hit,
   };
+};
+
+GetAlbum.propTypes = {
+  albumId: PropTypes.number.isRequired,
 };

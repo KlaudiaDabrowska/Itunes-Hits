@@ -2,6 +2,7 @@ import React from 'react';
 import { Wrapper, Number, Description, Image, AlbumTitle, ArtistName } from 'assets/styles/ListItem.styles';
 import { useNavigate } from 'react-router-dom';
 import { StyledButton } from 'assets/styles/Button.styles';
+import PropTypes from 'prop-types';
 
 export const ListItem = ({ el, index }) => {
   let navigate = useNavigate();
@@ -22,4 +23,9 @@ export const ListItem = ({ el, index }) => {
       <StyledButton onClick={handleClick}>More info</StyledButton>
     </Wrapper>
   );
+};
+
+ListItem.propTypes = {
+  el: PropTypes.object.isRequired,
+  index: PropTypes.number.isRequired,
 };
